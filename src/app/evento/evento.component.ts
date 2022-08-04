@@ -1,24 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { MenuModule } from 'primeng/menu';
 import { MegaMenuItem,MenuItem } from 'primeng/api';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
-})
-export class HomeComponent implements OnInit {
+    selector: 'app-evento',
+    templateUrl: './evento.component.html',
+    styleUrls: ['./evento.component.css']
+  })
+export class EventoComponent implements OnInit {
 
-  public items: MenuItem[] = [];
+    public items: MenuItem[] = [];
 
-
-  constructor() { }
+    public date: any;
+    
+    constructor() { }
 
   ngOnInit(): void {
     this.items = [{
       label: 'Eventos',
       items: [
-          {label: 'Novo Evento', icon: 'pi pi-plus', url: 'app-evento'},
+          {label: 'Novo Evento', icon: 'pi pi-plus'},
           {label: 'Administrar Eventos', icon: 'pi pi-download'}
       ]
     },
@@ -31,4 +32,6 @@ export class HomeComponent implements OnInit {
     }];
 
   }
+
+
 }

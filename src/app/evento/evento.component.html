@@ -1,0 +1,25 @@
+<p-menubar [model]="items">
+    <ng-template pTemplate="start">
+        <a [routerLink]="'/app-home'"><img src="/assets/imagens/logo_alpha_thumb.png" height="70" class="mr-4"></a>
+        
+    </ng-template>
+    <ng-template pTemplate="end">
+        <input type="text" pInputText placeholder="Search" class="form-control">
+    </ng-template>
+</p-menubar>
+
+<section>
+    <div  style="padding-top: 30px;">
+
+        <form>
+
+            <div class="form-group">
+
+                <label class="col-12" for="icon">Data do Evento</label>
+                <p-calendar  [inputStyleClass]="'form-control'" [showIcon]="true" inputId="icon"></p-calendar>
+
+            </div>
+        </form>
+    </div>
+
+</section>
