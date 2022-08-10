@@ -13,13 +13,17 @@ import { CalendarModule } from 'primeng/calendar';
 import {DropdownModule} from 'primeng/dropdown';
 import {DividerModule} from 'primeng/divider';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
+import { PetComponent } from './pet/pet.component';
+import {TimelineModule} from 'primeng/timeline';
+import {CardModule} from 'primeng/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    EventoComponent
+    EventoComponent,
+    PetComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,9 @@ import {VirtualScrollerModule} from 'primeng/virtualscroller';
     CalendarModule,
     DropdownModule,
     DividerModule,
-    VirtualScrollerModule
+    VirtualScrollerModule,
+    TimelineModule,
+    CardModule
 
   ],
   providers: [],
