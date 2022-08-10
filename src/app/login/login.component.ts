@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  perfis: any;
+
+  constructor() { 
+    this.perfis = [
+      {name: 'Tutor', code: 'tutor'},
+      {name: 'Empresa', code: 'empresa'}
+  ];
+  }
 
   ngOnInit(): void {
   }
 
 }
+
+

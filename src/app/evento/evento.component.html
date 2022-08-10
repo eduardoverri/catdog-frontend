@@ -1,25 +1,58 @@
-<p-menubar [model]="items">
-    <ng-template pTemplate="start">
-        <a [routerLink]="'/app-home'"><img src="/assets/imagens/logo_alpha_thumb.png" height="70" class="mr-4"></a>
-        
-    </ng-template>
-    <ng-template pTemplate="end">
-        <input type="text" pInputText placeholder="Search" class="form-control">
-    </ng-template>
-</p-menubar>
+<div style="padding-bottom: 30px;">
+    <p-menubar [model]="items">
+        <ng-template pTemplate="start">
+            <a [routerLink]="'/app-home'"><img src="/assets/imagens/logo_alpha_thumb.png" height="70" class="mr-4"></a>
+        </ng-template>
+        <ng-template pTemplate="end">
+            <input type="text" pInputText placeholder="Search" class="form-control">
+        </ng-template>
+    </p-menubar>
 
-<section>
-    <div  style="padding-top: 30px;">
 
-        <form>
+</div>
 
-            <div class="form-group">
 
-                <label class="col-12" for="icon">Data do Evento</label>
-                <p-calendar  [inputStyleClass]="'form-control'" [showIcon]="true" inputId="icon"></p-calendar>
+<div>
+    <form>
 
+        <div class="form-row">
+            <div class="form-group col-md-5">
+                <label for="icon" class="col-12">Data do Evento</label>
+                <p-calendar [inputStyleClass]="'form-control'" [showIcon]="true" inputId="icon"></p-calendar>
             </div>
-        </form>
-    </div>
 
-</section>
+            <div class="form-group col-md-5" style="padding-top: 15px;">
+                <label for="inputState">Tipo de Evento</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Estética</option>
+                    <option>Saúde</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-5" style="padding-top: 15px;">
+                <label for="inputState">Pet</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Lolita</option>
+                    <option>Bento</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-5" style="padding-top: 15px;">
+                <label for="inputClinica">Clínica/ Petshop</label>
+                <input class="form-control" type="text" id="inputClinica" pInputText />
+            </div>
+
+            
+        </div>
+
+
+        <div class="form-group" style="padding-top: 15px;">
+            <label for="exampleFormControlTextarea1">Descrição do Evento</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+
+        <div style="padding-top: 20px;">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+    </form>
+</div>

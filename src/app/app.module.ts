@@ -10,6 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { EventoComponent } from './evento/evento.component';
 import { CalendarModule } from 'primeng/calendar';
+import {DropdownModule} from 'primeng/dropdown';
+import {DividerModule} from 'primeng/divider';
+import {VirtualScrollerModule} from 'primeng/virtualscroller';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,11 @@ import { CalendarModule } from 'primeng/calendar';
     MenuModule,
     MegaMenuModule,
     MenubarModule,
-    CalendarModule
+    CalendarModule,
+    DropdownModule,
+    DividerModule,
+    VirtualScrollerModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
