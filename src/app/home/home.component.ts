@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
     this.items = [{
       label: 'Eventos',
       items: [
-          {label: 'Novo Evento', icon: 'pi pi-plus', url: 'app-evento'},
+          {label: 'Novo Evento', icon: 'pi pi-plus', routerLink: '/app-evento'},
           {label: 'Administrar Eventos', icon: 'pi pi-download'}
       ]
     },
