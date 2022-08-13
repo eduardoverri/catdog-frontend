@@ -1,16 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuModule } from 'primeng/menu';
-import { MegaMenuItem,MenuItem } from 'primeng/api';
+import { MenuItem } from 'primeng/api';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.css']
 })
-export class HomeComponent implements OnInit {
+export class MenuComponent implements OnInit {
 
   public items: MenuItem[] = [];
-
 
   constructor() { }
 
@@ -29,6 +27,6 @@ export class HomeComponent implements OnInit {
             {label: 'Redo', icon: 'pi pi-repeat'}
         ]
     }];
-
   }
+
 }

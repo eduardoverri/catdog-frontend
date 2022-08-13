@@ -1,71 +1,61 @@
-<div style="padding-bottom: 30px;">
-    <p-menubar [model]="items">
-        <ng-template pTemplate="start">
-            <a [routerLink]="'/app-home'"><img src="/assets/imagens/logo_alpha_thumb.png" height="70" class="mr-4"></a>
-        </ng-template>
-        <ng-template pTemplate="end">
-            <input type="text" pInputText placeholder="Search" class="form-control">
-        </ng-template>
-    </p-menubar>
+<app-menu></app-menu>
+<div class="card" style="margin-top: 20px;">
+    <h5 class="card-header">Novo Evento</h5>
+    <div class="card-body">
+        
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="icon" class="col-12">Data do Evento</label>
+                    <p-calendar [inputStyleClass]="'form-control'" [showIcon]="true" inputId="icon"></p-calendar>
+                </div>
+
+                <div class="form-group col-md-5" style="padding-top: 15px;">
+                    <label for="inputState">Tipo de Evento</label>
+                    <select id="inputState" class="form-control">
+                        <option>Saúde</option>
+                        <option selected>Estética</option>
+                        <option>Creche</option>
+                        <option>Hotel</option>
+                        <option>Alimentos</option>
+                        <option>Acessórios</option>
+                        <option>Cuidador</option>
+                        <option>Dog Walker</option>
+                        <option>Pet Sitter</option>
+                        <option>Outros</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-5" style="padding-top: 15px;">
+                    <label for="inputState">Pet</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Lolita</option>
+                        <option>Bento</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-5" style="padding-top: 15px;">
+                    <label for="inputClinica">Clínica/ Petshop</label>
+                    <input class="form-control" type="text" id="inputClinica" pInputText />
+                </div>
 
 
-</div>
-
-
-<div>
-    <form>
-
-        <div class="form-row">
-            <div class="form-group col-md-5">
-                <label for="icon" class="col-12">Data do Evento</label>
-                <p-calendar [inputStyleClass]="'form-control'" [showIcon]="true" inputId="icon"></p-calendar>
             </div>
 
             <div class="form-group col-md-5" style="padding-top: 15px;">
-                <label for="inputState">Tipo de Evento</label>
-                <select id="inputState" class="form-control">
-                    <option>Saúde</option>
-                    <option selected>Estética</option>
-                    <option>Creche</option>
-                    <option>Hotel</option>
-                    <option>Alimentos</option>
-                    <option>Acessórios</option>
-                    <option>Cuidador</option>
-                    <option>Dog Walker</option>
-                    <option>Pet Sitter</option>
-                    <option>Outros</option>
-                </select>
+                <label for="inputClinica">Fotos</label>
+                <input class="form-control" type="file" id="inputClinica" />
             </div>
 
-            <div class="form-group col-md-5" style="padding-top: 15px;">
-                <label for="inputState">Pet</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Lolita</option>
-                    <option>Bento</option>
-                </select>
-            </div>
-            
-            <div class="form-group col-md-5" style="padding-top: 15px;">
-                <label for="inputClinica">Clínica/ Petshop</label>
-                <input class="form-control" type="text" id="inputClinica" pInputText />
+
+            <div class="form-group" style="padding-top: 15px;">
+                <label for="exampleFormControlTextarea1">Texto/Legenda</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
 
-            
-        </div>
-
-        <div class="form-group col-md-5" style="padding-top: 15px;">
-            <label for="inputClinica">Fotos</label>
-            <input class="form-control" type="file" id="inputClinica" />
-        </div>
-
-
-        <div class="form-group" style="padding-top: 15px;">
-            <label for="exampleFormControlTextarea1">Texto/Legenda</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-
-        <div style="padding-top: 20px;">
-            <button type="submit" class="btn btn-primary">Salvar</button>
-        </div>
-    </form>
+            <div style="padding-top: 20px;">
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </div>
+        </form>
+    </div>
 </div>
