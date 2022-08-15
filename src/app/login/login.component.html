@@ -4,15 +4,23 @@
         <main class="form-signin">
             <form>
               <img src="/assets/imagens/logo_alpha_thumb.png" alt="" width="300">
-              <br>
+              <br>              
               <br>
               <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="email" name="login" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="login">
                 <label for="floatingInput">Email</label>
               </div>
               <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <input type="password" name="senha" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="senha">
                 <label for="floatingPassword">Senha</label>
+              </div>
+              <br>
+              <div class="form-floating">
+                <select id="inputState" class="form-control" name="perfil" [(ngModel)]="perfil">
+                  <option value="Tutor(a)" selected>Tutor(a)</option>
+                  <option value="Parceira">Entidade Parceira</option>
+              </select>
+                <label for="floatingInput">Perfil</label>
               </div>
               <br>
               <div class="checkbox mb-3">
@@ -20,7 +28,17 @@
                   <input type="checkbox" value="remember-me"> Esqueci minha senha
                 </label>
               </div>
-              <a class="w-100 btn btn-lg btn-primary" type="submit" [routerLink]="'app-home-tutor'">Entrar</a>
+              <a class="w-100 btn btn-lg btn-primary" type="submit" (click)="realizarLogin()">Entrar</a>
+              <br>
+              <br>
+              <div class="row">
+                <div>
+                  <a class="btn btn-outline-dark" href="/users/googleauth" role="button" style="text-transform:none">
+                    <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                    Login with Google
+                  </a>
+                </div>
+              </div>
               <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
             </form>
           </main>

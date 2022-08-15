@@ -1,36 +1,35 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { MenuModule } from 'primeng/menu';
-import { MegaMenuItem,MenuItem } from 'primeng/api';
+import { MegaMenuItem, MenuItem } from 'primeng/api';
+import { AutoCompleteModule } from 'primeng/autocomplete';
 
 @Component({
-    selector: 'app-evento',
-    templateUrl: './evento.component.html',
-    styleUrls: ['./evento.component.css']
-  })
+  selector: 'app-evento',
+  templateUrl: './evento.component.html',
+  styleUrls: ['./evento.component.css']
+})
 export class EventoComponent implements OnInit {
 
-    public items: MenuItem[] = [];
+  public date: any;
 
-    public date: any;
-    
-    constructor() { }
+  @Input() perfil: string | null = "";
+  @Input() nome: string | null = "";
+
+  pets: string[] = [];
+  parceiras: string[] = [];
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.items = [{
-      label: 'Eventos',
-      items: [
-          {label: 'Novo Evento', icon: 'pi pi-plus'},
-          {label: 'Administrar Eventos', icon: 'pi pi-download'}
-      ]
-    },
-    {
-        label: 'Administrativo',
-        items: [
-            {label: 'Undo', icon: 'pi pi-refresh'},
-            {label: 'Redo', icon: 'pi pi-repeat'}
-        ]
-    }];
+    
+  }
 
+  searchPet(event: any) {
+    this.pets = ["Bento", "Lolita", "Caramelo", "Bulma"];
+  }
+
+  searchParceiras(event: any) {
+    this.parceiras = ["Pet Love", "Clinica XYZ"];
   }
 
 

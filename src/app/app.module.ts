@@ -18,6 +18,8 @@ import { PetComponent } from './pet/pet.component';
 import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from 'primeng/card';
 import { MenuComponent } from './menu/menu.component';
+import { FormsModule } from '@angular/forms';
+import { AutoCompleteModule } from 'primeng/autocomplete';
 
 @NgModule({
   declarations: [
@@ -41,8 +43,9 @@ import { MenuComponent } from './menu/menu.component';
     DividerModule,
     VirtualScrollerModule,
     TimelineModule,
-    CardModule
-
+    CardModule,
+    FormsModule,
+    AutoCompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

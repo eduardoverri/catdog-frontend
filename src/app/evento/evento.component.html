@@ -1,10 +1,15 @@
-<app-menu></app-menu>
+<app-menu *ngIf="perfil == '' || perfil == null" [perfil]="perfil" [nome]="nome"></app-menu>
 <div class="card" style="margin-top: 20px;">
     <h5 class="card-header">Novo Evento</h5>
     <div class="card-body">
         
         <form>
             <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="icon" class="col-12">Pet</label>
+                    <p-autoComplete [inputStyleClass]="'form-control'" [suggestions]="pets" (completeMethod)="searchPet($event)" [dropdown]="true"></p-autoComplete>
+                </div>
+                
                 <div class="form-group col-md-5">
                     <label for="icon" class="col-12">Data do Evento</label>
                     <p-calendar [inputStyleClass]="'form-control'" [showIcon]="true" inputId="icon"></p-calendar>
@@ -34,9 +39,10 @@
                     </select>
                 </div>
 
-                <div class="form-group col-md-5" style="padding-top: 15px;">
+                <div *ngIf="perfil != 'Parceira'" class="form-group col-md-5" style="padding-top: 15px;">
                     <label for="inputClinica">Clínica/ Petshop</label>
-                    <input class="form-control" type="text" id="inputClinica" pInputText />
+                    <br>
+                    <p-autoComplete [inputStyleClass]="'form-control'" [suggestions]="parceiras" (completeMethod)="searchParceiras($event)" [dropdown]="true"></p-autoComplete>
                 </div>
 
 

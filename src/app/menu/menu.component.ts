@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -10,9 +10,13 @@ export class MenuComponent implements OnInit {
 
   public items: MenuItem[] = [];
 
+  @Input() perfil: string | null = "";
+  @Input() nome: string | null = "";
+
   constructor() { }
 
   ngOnInit(): void {
+
     this.items = [{
       label: 'Eventos',
       items: [

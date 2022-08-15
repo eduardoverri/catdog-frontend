@@ -1,21 +1,2 @@
-<app-menu></app-menu>
-<div class="row text-center" style="margin-top: 20px;">
-
-  <figure class="figure col-2 btn btn-light" onclick="Array.from(document.getElementsByClassName('figure')).forEach(function(x){x.classList.remove('active');});this.classList.add('active');">
-    <img src="/assets/imagens/cachorro.jpg" class="figure-img img-fluid rounded" alt="Bento">
-    <figcaption class="figure-caption text-end"><h5>Bento</h5></figcaption>
-  </figure>
-
-  <figure class="figure col-2  btn btn-light" onclick="Array.from(document.getElementsByClassName('figure')).forEach(function(x){x.classList.remove('active');});this.classList.add('active');">
-    <img src="/assets/imagens/gato.jpg" class="figure-img img-fluid rounded" alt="Lolita">
-    <figcaption class="figure-caption text-end"><h5>Lolita</h5></figcaption>
-  </figure>
-
-  <figure class="figure col-2  btn btn-light">
-    <img src="/assets/imagens/plus.png" class="figure-img img-fluid rounded" alt="Novo Pet">
-    <figcaption class="figure-caption text-end"><h5>Novo Pet</h5></figcaption>
-  </figure>
-  
-</div>
-<hr class="col-12" />
-<app-pet></app-pet>
+<app-menu [perfil]="perfil" [nome]="nome"></app-menu>
+<app-evento [perfil]="perfil" [nome]="nome"></app-evento>

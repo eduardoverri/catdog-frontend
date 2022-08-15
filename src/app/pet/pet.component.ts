@@ -9,36 +9,18 @@ import { MegaMenuItem,MenuItem, PrimeIcons } from 'primeng/api';
   })
 export class PetComponent implements OnInit {
 
-    public items: MenuItem[] = [];
     events1: any[];
 
-    public date: any;
-    
     constructor() {
       this.events1 = [
-        {status: 'Estética', date: '09/08/2022 10:30', icon: PrimeIcons.CHECK},
-        {status: 'Estética', date: '01/08/2022 14:00', icon: PrimeIcons.CHECK},
-        {status: 'Saúde', date: '01/06/2022 16:15', icon: PrimeIcons.CHECK},
-        {status: 'Saúde', date: '02/04/2022 10:00', icon: PrimeIcons.CHECK}
+        {status: 'Lolita - Estética - Pet Love', date: '15/10/2020 10:30', icon: PrimeIcons.SHOPPING_CART, image: 'gato2.png', text: 'Banho na Pet Love, obviamentente a Lolita Não gosta de banho...'},
+        {status: 'Saúde - Bento - Clinica XYZ', date: '15/10/2020 14:00', icon: PrimeIcons.CALENDAR_PLUS, image: 'cachorro2.jpg', text: 'Foi difícil, levamos um susto mas vamos superar!'},
+        {status: 'Outros - Bento', date: '15/10/2020 14:00', icon: PrimeIcons.CAR, image: 'cachorro1.jpg', text: 'Cansados pós passeio com o coleguina no parque 🥰'},
     ];
      }
 
   ngOnInit(): void {
-    this.items = [{
-      label: 'Eventos',
-      items: [
-          {label: 'Novo Evento', icon: 'pi pi-plus'},
-          {label: 'Administrar Eventos', icon: 'pi pi-download'}
-      ]
-    },
-    {
-        label: 'Administrativo',
-        items: [
-            {label: 'Undo', icon: 'pi pi-refresh'},
-            {label: 'Redo', icon: 'pi pi-repeat'}
-        ]
-    }];
-
+    
   }
 
 
